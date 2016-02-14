@@ -16,10 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K02-YZ-KNP">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="New Game" id="uK9-Jg-bcQ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FN2-TR-hAa"/>
+                                    <barButtonItem title="How to Use" id="ymr-JS-ne6"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tQq-6H-qKk"/>
+                                    <barButtonItem title="Settings" id="730-b2-vwk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oX8-dN-amn"/>
+                                    <barButtonItem title="About" id="ehq-4h-noC">
+                                        <inset key="imageInsets" minX="209" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="K02-YZ-KNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0oG-Bt-0Jx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K02-YZ-KNP" secondAttribute="bottom" id="Edp-D7-z0n"/>
+                            <constraint firstAttribute="trailing" secondItem="K02-YZ-KNP" secondAttribute="trailing" id="di4-3O-MaH"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uWe-FK-OAJ" appends="YES" id="Tek-j5-XEY"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uWe-FK-OAJ"/>
             </objects>
         </scene>
     </scenes>
