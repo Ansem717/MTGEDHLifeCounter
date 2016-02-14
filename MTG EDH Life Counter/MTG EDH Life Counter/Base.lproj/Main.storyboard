@@ -20,33 +20,68 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K02-YZ-KNP">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="New Game" id="uK9-Jg-bcQ"/>
+                                    <barButtonItem title="New Game" id="uK9-Jg-bcQ">
+                                        <connections>
+                                            <action selector="newGame:" destination="BYZ-38-t0r" id="iyR-6F-Xzn"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FN2-TR-hAa"/>
-                                    <barButtonItem title="How to Use" id="ymr-JS-ne6"/>
+                                    <barButtonItem title="How to Use" id="ymr-JS-ne6">
+                                        <connections>
+                                            <action selector="howToUse:" destination="BYZ-38-t0r" id="7MB-5w-P8X"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tQq-6H-qKk"/>
-                                    <barButtonItem title="Settings" id="730-b2-vwk"/>
+                                    <barButtonItem title="Settings" id="730-b2-vwk">
+                                        <connections>
+                                            <action selector="settingsButton:" destination="BYZ-38-t0r" id="85e-6o-pJJ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oX8-dN-amn"/>
                                     <barButtonItem title="About" id="ehq-4h-noC">
                                         <inset key="imageInsets" minX="209" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="aboutButton:" destination="BYZ-38-t0r" id="OYg-ra-Qco"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW9-vh-vjD">
+                                <rect key="frame" x="245" y="75" width="110" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="1YF-It-r0G"/>
+                                    <constraint firstAttribute="height" constant="75" id="PBo-dj-F1X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="20">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="firstLifeDown:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGr-T3-QgS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="K02-YZ-KNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0oG-Bt-0Jx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K02-YZ-KNP" secondAttribute="bottom" id="Edp-D7-z0n"/>
+                            <constraint firstItem="jW9-vh-vjD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xnt-ya-Plg"/>
                             <constraint firstAttribute="trailing" secondItem="K02-YZ-KNP" secondAttribute="trailing" id="di4-3O-MaH"/>
+                            <constraint firstItem="jW9-vh-vjD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="or6-nk-oSf"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="uWe-FK-OAJ" appends="YES" id="Tek-j5-XEY"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="firstLifeButton" destination="jW9-vh-vjD" id="DA3-Pa-Wsh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="uWe-FK-OAJ"/>
             </objects>
+            <point key="canvasLocation" x="235" y="335"/>
         </scene>
     </scenes>
 </document>
