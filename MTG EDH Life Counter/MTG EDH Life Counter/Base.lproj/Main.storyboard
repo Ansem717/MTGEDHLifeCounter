@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -29,12 +29,14 @@
                                     <barButtonItem title="How to Use" id="ymr-JS-ne6">
                                         <connections>
                                             <action selector="howToUse:" destination="BYZ-38-t0r" id="7MB-5w-P8X"/>
+                                            <segue destination="AUP-eJ-KZx" kind="presentation" id="cYm-r4-1oO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tQq-6H-qKk"/>
                                     <barButtonItem title="Settings" id="730-b2-vwk">
                                         <connections>
                                             <action selector="settingsButton:" destination="BYZ-38-t0r" id="85e-6o-pJJ"/>
+                                            <segue destination="L8u-vz-1Mz" kind="presentation" id="q01-jh-M4m"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oX8-dN-amn"/>
@@ -42,46 +44,189 @@
                                         <inset key="imageInsets" minX="209" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <action selector="aboutButton:" destination="BYZ-38-t0r" id="OYg-ra-Qco"/>
+                                            <segue destination="nku-qZ-Ncs" kind="presentation" id="pp7-Bg-gF6"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW9-vh-vjD">
-                                <rect key="frame" x="245" y="75" width="110" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="1YF-It-r0G"/>
-                                    <constraint firstAttribute="height" constant="75" id="PBo-dj-F1X"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="20">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="firstLifeDown:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGr-T3-QgS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="K02-YZ-KNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0oG-Bt-0Jx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K02-YZ-KNP" secondAttribute="bottom" id="Edp-D7-z0n"/>
-                            <constraint firstItem="jW9-vh-vjD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xnt-ya-Plg"/>
                             <constraint firstAttribute="trailing" secondItem="K02-YZ-KNP" secondAttribute="trailing" id="di4-3O-MaH"/>
-                            <constraint firstItem="jW9-vh-vjD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="or6-nk-oSf"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="uWe-FK-OAJ" appends="YES" id="Tek-j5-XEY"/>
-                        </connections>
                     </view>
-                    <connections>
-                        <outlet property="firstLifeButton" destination="jW9-vh-vjD" id="DA3-Pa-Wsh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="uWe-FK-OAJ"/>
             </objects>
-            <point key="canvasLocation" x="235" y="335"/>
+            <point key="canvasLocation" x="-505" y="855"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="5gb-ct-Ees">
+            <objects>
+                <viewController id="9ju-DT-cWm" customClass="SettingsViewController" customModule="MTG_EDH_Life_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aeD-od-zNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zs3-Xt-7ZV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DXq-fL-ocg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eF-L7-VG9">
+                                <rect key="frame" x="283" y="562" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="9ju-DT-cWm" eventType="touchUpInside" id="FaH-X1-O5k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6eF-L7-VG9" firstAttribute="centerX" secondItem="DXq-fL-ocg" secondAttribute="centerX" id="ZCv-K1-GH1"/>
+                            <constraint firstItem="Zs3-Xt-7ZV" firstAttribute="top" secondItem="6eF-L7-VG9" secondAttribute="bottom" constant="8" id="hOP-NR-TP4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hf8-2z-0Kg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="mp3-vh-mHT">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="9ju-DT-cWm" id="4MH-CL-bIL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Close without Saving" id="A5h-xb-oLo">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="9ju-DT-cWm" id="Ctr-Pg-CL5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w04-Jd-DN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="1443"/>
+        </scene>
+        <!--How To View Controller-->
+        <scene sceneID="FAO-lG-GLw">
+            <objects>
+                <viewController id="Alo-tZ-LJn" customClass="HowToViewController" customModule="MTG_EDH_Life_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HrL-rh-Usi"/>
+                        <viewControllerLayoutGuide type="bottom" id="QLB-yX-vdZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oxC-H3-aBj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oV9-LZ-mG4">
+                                <rect key="frame" x="8" y="72" width="584" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="584" id="9fk-cg-vfU"/>
+                                    <constraint firstAttribute="height" constant="90" id="Oel-J0-9iz"/>
+                                </constraints>
+                                <string key="text">This MTG App is designed to work with up to 6 EDH players, while still be an efficient tool in a competitive one vs one match. Use the Settings tab to choose starting life totals, number of players, and which features to include or disable. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oV9-LZ-mG4" firstAttribute="top" secondItem="HrL-rh-Usi" secondAttribute="bottom" constant="8" id="5Uh-Kq-HSB"/>
+                            <constraint firstItem="oV9-LZ-mG4" firstAttribute="leading" secondItem="oxC-H3-aBj" secondAttribute="leading" constant="8" id="fBp-Hw-oVT"/>
+                            <constraint firstAttribute="trailing" secondItem="oV9-LZ-mG4" secondAttribute="trailing" constant="8" id="ilr-mW-jA7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j3e-58-bat">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="OA7-Z0-bhj">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Alo-tZ-LJn" id="7Pz-mp-6Of"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cC-ro-Xs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="767"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="7W9-mD-QoE">
+            <objects>
+                <viewController id="Zhj-jF-hQl" customClass="AboutViewController" customModule="MTG_EDH_Life_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZa-XZ-jRl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ulA-5P-Lb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nXG-cn-Ntb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bNa-e1-tVy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="6xt-vj-H7e">
+                            <connections>
+                                <action selector="closeViewButtonPressed:" destination="Zhj-jF-hQl" id="e8T-Ne-g7x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N12-Bd-Xsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Tq-UR-1eI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L8u-vz-1Mz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tT2-xM-9XO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9ju-DT-cWm" kind="relationship" relationship="rootViewController" id="gsw-vv-0WC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43M-1s-AUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="1443"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xFz-Bx-VPZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nku-qZ-Ncs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jwb-Sf-FaE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Alo-tZ-LJn" kind="relationship" relationship="rootViewController" id="rJk-5y-QTu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ae2-LX-Bt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SJG-S5-YvV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUP-eJ-KZx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9vm-tL-wcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zhj-jF-hQl" kind="relationship" relationship="rootViewController" id="sld-MM-D6P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lME-QI-m3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="56"/>
         </scene>
     </scenes>
 </document>

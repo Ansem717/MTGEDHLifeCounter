@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E9338AA81C70695F005F0E94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9338AA71C70695F005F0E94 /* AppDelegate.swift */; };
-		E9338AAA1C70695F005F0E94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9338AA91C70695F005F0E94 /* ViewController.swift */; };
+		E9338AAA1C70695F005F0E94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9338AA91C70695F005F0E94 /* MainViewController.swift */; };
 		E9338AAD1C70695F005F0E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9338AAB1C70695F005F0E94 /* Main.storyboard */; };
 		E9338AB01C70695F005F0E94 /* MTG_EDH_Life_Counter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9338AAE1C70695F005F0E94 /* MTG_EDH_Life_Counter.xcdatamodeld */; };
 		E9338AB21C706960005F0E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9338AB11C706960005F0E94 /* Assets.xcassets */; };
 		E9338AB51C706960005F0E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9338AB31C706960005F0E94 /* LaunchScreen.storyboard */; };
+		E9FCAC481C9243CD001E3919 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCAC471C9243CD001E3919 /* AboutViewController.swift */; };
+		E9FCAC4A1C9243DF001E3919 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCAC491C9243DF001E3919 /* HowToViewController.swift */; };
+		E9FCAC4C1C9243F9001E3919 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCAC4B1C9243F9001E3919 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9338AA41C70695F005F0E94 /* MTG EDH Life Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG EDH Life Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9338AA71C70695F005F0E94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9338AA91C70695F005F0E94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9338AA91C70695F005F0E94 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9338AAC1C70695F005F0E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9338AAF1C70695F005F0E94 /* MTG_EDH_Life_Counter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTG_EDH_Life_Counter.xcdatamodel; sourceTree = "<group>"; };
 		E9338AB11C706960005F0E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9338AB41C706960005F0E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9338AB61C706960005F0E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FCAC471C9243CD001E3919 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E9FCAC491C9243DF001E3919 /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		E9FCAC4B1C9243F9001E3919 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,10 @@
 		E9338ABD1C706996005F0E94 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E9338AA91C70695F005F0E94 /* ViewController.swift */,
+				E9338AA91C70695F005F0E94 /* MainViewController.swift */,
+				E9FCAC471C9243CD001E3919 /* AboutViewController.swift */,
+				E9FCAC491C9243DF001E3919 /* HowToViewController.swift */,
+				E9FCAC4B1C9243F9001E3919 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -162,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9338AAA1C70695F005F0E94 /* ViewController.swift in Sources */,
+				E9338AAA1C70695F005F0E94 /* MainViewController.swift in Sources */,
 				E9338AA81C70695F005F0E94 /* AppDelegate.swift in Sources */,
+				E9FCAC481C9243CD001E3919 /* AboutViewController.swift in Sources */,
 				E9338AB01C70695F005F0E94 /* MTG_EDH_Life_Counter.xcdatamodeld in Sources */,
+				E9FCAC4A1C9243DF001E3919 /* HowToViewController.swift in Sources */,
+				E9FCAC4C1C9243F9001E3919 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +326,7 @@
 				E9338ABB1C706960005F0E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
